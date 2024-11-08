@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/bd50cea79c.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <figure>
+      <img src="imagenes/logo.jpg" alt="">
+    </figure>
+  </header>
+<section class="contenedor_padre">
+  <section class="contenedor_izquierdo">
+    <h3>Our Team</h3>
+    <h1>A Dedicated Team of Experts</h1>
+    <br>
+    <p>PASSION, EXPERIENCE AND A FIERCE COMMITMENT TO EDUCATION ARE THE CORNERSTONES OF OUR SUCCESS IN THE BEAUTY INDUSTRY</p>
+    <br>
+    <p id="legris">We believe that being the largest SPA in the area is not enough in itself to satisfy the needs of our customers. For this reason we have built up a staff of specialized professionals who are proud to welcome you to our hotel, present what we do, listen to your needs and guarantee well-being and relaxation during your stay at our SPA Resort.</p>
+    <br>
+    <p id="legris">
+      Everyone in our team is a certified specialist capable of delivering a unique service of high quality you won't find anywhere else in modern spa and resort industry.
+    </p>
+    <br>
+    <div class="botones_izq">
+      <a href="#" class="btn_modal">LEAR MORE</a>
+      <a href="#" id="btn2">VIEW AL TEAM</a>
+    </div>
+  </section>
+
+    <section class="contenedor_derecho">
+      <article class="contacto1">
+        <figure>
+          <img src="imagenes/foto1.jpg" alt="">
+        </figure>
+        <p id="lerojo">Jessica couper</p>
+        <p>Esthetican</p>
+        <div class="iconos">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </div>
+        <a href="#" class="btn_modal" id="boton_modal">GET IN TOUCH</a>
+      </article>
+      <article class="contacto1">
+        <figure>
+          <img src="imagenes/foto2.jpg" alt="">
+        </figure>
+        <p id="lerojo">Fernando montero</p>
+        <p>Designer</p>
+        <div class="iconos">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </div>
+        <a href="#" class="btn_modal" id="boton_modal">GET IN TOUCH</a>
+      </article>
+
+    </section>
+</section>
+  <section id="modal" class="fondomodal">
+    <div class="contenidomodal">
+      <div class="alineacion_cerrar">
+        <i id="cerrar_modal" class="cerrarmodal  fa-solid fa-square-xmark"></i>
+      </div>
+    
+      <article class="promociones">
+        <h2>Contac Us</h2>
+        <br>
+        <p>
+          If you have any questions concerning our services, please fill out the contact form below
+        </p>
+        <br>
+        <form>
+          <div class="form-group">
+            <label >Nombre</label>
+            <input placeholder="Name *">
+          </div>
+          <div class="form-group">
+            <label >Email</label>
+            <input placeholder="E-mail *">
+          </div>
+          <div class="form-group">
+            <label >Mensaje</label>
+            <textarea id="message" name="message" required placeholder="Message *"></textarea>
+          </div>
+          <button class="submit-btn">SUBMIT</button>
+        </form>
+      </article>
+    </div>
+  </section>
+<footer>
+</footer>
+
+  <!-- FUNCIONES JAVASCRIPT -->
+  <script>
+
+    $("#boton_modal").click(function () {
+      $("#modal").addClass("mostrar");
+    })
+
+    $("#cerrar_modal").click(function () {
+      $("#modal").removeClass("mostrar");
+    })
+
+    // // por tiempo 5 segundos
+    // function tiempo() {
+    //   $("#modal").addClass("mostrar");
+    // }
+    // setTimeout(tiempo, 5000);
+
+
+    // click por fuera
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        $("#modal").removeClass("mostrar");
+      }
+    };
+
+    // click tecla ESC
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        $("#modal").removeClass("mostrar");
+      }
+    });
+
+
+/*
+    // scroll mas de 600px
+    function onScroll() {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > 600) {
+        $("#modal").addClass("mostrar");
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+
+
+*/
+
+
+  </script>
+
+</body>
+</html>
